@@ -62,6 +62,10 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *up_vol[]   = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "+10%",   NULL };
 static const char *down_vol[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "-10%",   NULL };
 static const char *mute_vol[] = { "pactl", "set-sink-mute",   "@DEFAULT_SINK@", "toggle", NULL };
+static const char *music_stop[] = { "playerctl", "stop", NULL };
+static const char *music_prev[] = { "playerctl", "previous", NULL };
+static const char *music_play[] = { "playerctl", "play-pause", NULL };
+static const char *music_next[] = { "playerctl", "next", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -101,6 +105,10 @@ static const Key keys[] = {
 { 0, XF86XK_AudioMute,        spawn, {.v = mute_vol } },
 { 0, XF86XK_AudioLowerVolume, spawn, {.v = down_vol } },
 { 0, XF86XK_AudioRaiseVolume, spawn, {.v = up_vol } },
+{ 0, XF86XK_AudioStop,        spawn, {.v = music_stop } },
+{ 0, XF86XK_AudioPrev,        spawn, {.v = music_prev } },
+{ 0, XF86XK_AudioPlay,        spawn, {.v = music_play } },
+{ 0, XF86XK_AudioNext,        spawn, {.v = music_next } },
 };
 
 /* button definitions */
