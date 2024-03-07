@@ -1,5 +1,6 @@
 /* See LICENSE file for copyright and license details. */
 #include <X11/XF86keysym.h>
+#include "exitdwm.c"
 
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
@@ -108,7 +109,6 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 { 0, XF86XK_AudioMute,        spawn, {.v = mute_vol } },
 { 0, XF86XK_AudioLowerVolume, spawn, {.v = down_vol } },
 { 0, XF86XK_AudioRaiseVolume, spawn, {.v = up_vol } },
@@ -116,6 +116,8 @@ static const Key keys[] = {
 { 0, XF86XK_AudioPrev,        spawn, {.v = music_prev } },
 { 0, XF86XK_AudioPlay,        spawn, {.v = music_play } },
 { 0, XF86XK_AudioNext,        spawn, {.v = music_next } },
+	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ MODKEY|ShiftMask,             XK_e,      exitdwm,       {0} },
 };
 
 /* button definitions */
