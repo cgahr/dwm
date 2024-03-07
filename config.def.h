@@ -116,8 +116,7 @@ static const Key keys[] = {
 { 0, XF86XK_AudioPrev,        spawn, {.v = music_prev } },
 { 0, XF86XK_AudioPlay,        spawn, {.v = music_play } },
 { 0, XF86XK_AudioNext,        spawn, {.v = music_next } },
-	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
-	{ MODKEY|ShiftMask,             XK_e,      exitdwm,       {0} },
+	{ MODKEY|ShiftMask,             XK_q,      exitdwm,       {0} },
 };
 
 /* button definitions */

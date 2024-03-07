@@ -22,8 +22,8 @@ void exitdwm ()
 # endif
 
 # define S_LOCK "Lock"
-# define S_RESTART_DWM "restart Dwm"
-# define S_OFFSCREEN "Off-screen"
+# define S_RESTART_DWM "Restart dwm"
+# define S_OFFSCREEN "Turn off screen"
 # define S_EXIT "Exit"
 # define S_REBOOT "Reboot"
 # define S_SHUTDOWN "Shutdown"
