@@ -18,11 +18,12 @@ static const char col_foreground[]  = "#f7f1ff";
 static const char col_fore_inv[]    = "#f7f1ff";
 static const char col_background[]  = "#222222";
 static const char col_green[]       = "#7bd88f";
+static const char col_selection_b[] = "#525053";
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_foreground, col_background, col_background },
-	[SchemeSel]  = { col_background, col_green,  col_green  },
+	[SchemeSel]  = { col_background, col_green,  col_cyan },
 };
 
 /* tagging */
@@ -63,8 +64,8 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_background, "-nf", col_foreground, "-sb", col_selection_b, "-sf", col_foreground, NULL };
 static const char *up_vol[]   = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "+10%",   NULL };
 static const char *down_vol[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "-10%",   NULL };
 static const char *mute_vol[] = { "pactl", "set-sink-mute",   "@DEFAULT_SINK@", "toggle", NULL };
